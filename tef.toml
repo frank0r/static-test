@@ -1,0 +1,21 @@
+name = "nuxt-template-nnsjiang"
+nodeVersion = "20"
+
+# spa=off
+# spaPage='index.html'
+
+[[rule]]
+source.match='/xxx'
+status='301'
+to='/sdf'
+header.1.content-type='yy|sd'
+header.content-type='aaa'
+header.set-cookie='bbb'
+
+[[rule]]
+source.match='/xxx'
+status='301'
+to='/sdf'
+header.2.content-type='yy|sd'
+header.content-type='aaa'
+header.set-cookie='bbb'
