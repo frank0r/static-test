@@ -1,0 +1,54 @@
+{
+    "$schema": "./edgeone.schema.json",
+    "outputDirectory": "asdf",
+    "redirects": [
+      {
+        "source": "/:a/dda/:b/blout",
+        "destination": "/:b/about-team.html",
+        "statusCode": 302
+      }
+    ],
+    "headers": [
+      {
+        "source": "/firebase/ab:a/:b",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=2592000"
+          },
+          {
+            "key": "X-Robots-Tag",
+            "value": "noindex,must-revalidate"
+          },
+          {
+            "key": "",
+            "value": "noindex,must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "/(.*)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=2592000"
+          },
+          {
+            "key": "X-Robots-Tag",
+            "value": "noindex,must-revalidate"
+          }
+        ]
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "(**)/(*).jpg",
+        "destination": "/c/:b"
+      },
+      {
+        "source": "/d/:d/",
+        "destination": "/c/"
+      }
+    ]
+  }
+  
